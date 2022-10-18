@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img class="banner__img" src="odin-lined.png" alt="logo">
+            <p class="banner__text">Davide</p>
+        </div>
+    </header>
+    <main>
+        <section class="page__title">
+            <p>This is not a real online service! You know you need something like this in your
+                life to help you realize your deepest dreams.
+                <br>
+                Sign up now to get started.            
+            </p>
+            <br>
+            <p>You <span class="italic">know</span> you want to.</p>
+        </section>
+        <h1 class="form__title">Let's do this!</h1>
+        <form id="form" action="#">
+            <div class="form__element"><label for="fname">first name</label><input id="fname" type="text"><p class="error"></p></div>
+            <div class="form__element"><label for="lname">last name</label><input id="lname" type="text"><p class="error"></p></div>
+            <div class="form__element"><label for="email">*email</label><input id="email" type="email"><p class="error"></p></div>
+            <div class="form__element"><label for="phone">phone number</label><input id="phone" type="text" inputmode="numeric"><p class="error"></p></div>
+            <div class="form__element"><label for="password">*password</label><input id="password" type="password"><p class="error"></p></div>
+            <div class="form__element"><label for="cpassword">*confirm password</label><input id="cpassword" type="password"><p class="error"></p></div>
+        </form>
+        <input class="form__submit" type="submit" value="Create Account" form="form">
+        <p class="go-to-login">Already have an account? <a href="#">Log in</a></p>
+    </main>    
+</body>
+</html>
