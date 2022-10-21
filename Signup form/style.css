@@ -100,16 +100,24 @@ main > *{
 #form input:invalid{
     border: 1px solid red;
 }
+
 #form input:valid{
     border: 1px solid lightgray;
 }
+
+#form input.error{
+    border: 1px solid red;
+}
+
 #form input:focus{    
     border: 1px solid rgb(211, 128, 3);
     box-shadow: .2rem .25rem .2em 0 rgba(207, 206, 206, 0.767)
 }
 
-.form__submit{
-    margin: 2rem 2rem;
+
+
+#form__submit{
+    margin: 2rem 0;
     appearance: none;
     border: none;
     background-color: rgb(211, 128, 3);
@@ -136,10 +144,14 @@ main > *{
     color: rgb(72, 155, 4);
 }
 
-
-
 .italic{
     font-style: italic;
+}
+
+.action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -163,5 +175,9 @@ main > *{
 
     .page__title{
         padding: 5rem 8rem 2rem 2rem;
+    }
+
+    .action{
+        display: block;
     }
 }

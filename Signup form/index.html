@@ -31,11 +31,13 @@
             <div class="form__element"><label for="lname">last name</label><input id="lname" type="text"><p class="error"></p></div>
             <div class="form__element"><label for="email">*email</label><input id="email" type="email"><p class="error"></p></div>
             <div class="form__element"><label for="phone">phone number</label><input id="phone" type="text" inputmode="numeric"><p class="error"></p></div>
-            <div class="form__element"><label for="password">*password</label><input id="password" type="password"><p class="error"></p></div>
-            <div class="form__element"><label for="cpassword">*confirm password</label><input id="cpassword" type="password"><p class="error"></p></div>
+            <div class="form__element"><label for="password">*password</label><input id="password" type="password" class="error"><p class="error"></p></div>
+            <div class="form__element"><label for="cpassword">*confirm password</label><input id="cpassword" type="password" class="error"><p class="error"></p></div>
         </form>
-        <input class="form__submit" type="submit" value="Create Account" form="form">
-        <p class="go-to-login">Already have an account? <a href="#">Log in</a></p>
+        <div class="action">
+            <input id="form__submit" type="submit" value="Create Account" form="form">
+            <p class="go-to-login">Already have an account? <a href="#">Log in</a></p>
+        </div>
     </main>    
 </body>
 </html>
