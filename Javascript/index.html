@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>My Library</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <p class="logo__title">My Library</p>
+        </div>
+        <p class="user__icon">🧑</p>
+    </header>
+    <main class="main">
+        <button class="add__book" id="add__book">Add book</button>
+        <div class="book__list">
+            <!-- <div class="book" data-index="0">
+                <button class="book__delete">🗑️</button>
+                <p class="book__data title">Title: Example not read</p>
+                <p class="book__data author">Author: Me from HTML ofc</p>
+                <p class="book__data pages">Pages: 123</p>
+                <button onclick='(e) => toggleRead(e);' class="book__read">Not read</button>
+            </div>
+            <div class="book" data-index="1">
+                <button class="book__delete">🗑️</button>
+                <p class="book__data title">Title: Example read</p>
+                <p class="book__data author">Author: Still me from HTML dude</p>
+                <p class="book__data pages">Pages: 321</p>
+                <button onclick='((e) => console.log(e))()' class="book__read read">Read</button>
+            </div> -->
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="credits">Copyright &copy; The Odin Porject - Davide-Milan 2022</p>
+    </footer>
+
+    <div class="modal hidden" id="modal">
+        <form action="post" class="form">
+            <button class="close__modal">X</button>
+            <div class="input__data">
+                <label for="title">Title:</label><input type="text" name="title" id="title" required placeholder="Book title">
+            </div>
+            <div class="input__data">
+                <label for="author">Author:</label><input type="text" name="author" id="author" required placeholder="Author Name">
+            </div>
+            <div class="input__data">
+                <label for="pages">Pages:</label><input type="number" min="10" name="pages" id="pages" required value="10">
+            </div>
+            <div class="input__data">
+                <label for="read">Have you read it?<input type="checkbox" name="read" id="read"></label>
+            </div>
+            <input type="submit" value="Add book" class="submit" id="submit">
+        </form>
+    </div>
+</body>
+</html>

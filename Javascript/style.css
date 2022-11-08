@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1300px;
+    margin: auto;
+    box-shadow: 0 0 4px 0 #1F2937;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 5rem 1fr 5rem;
+}
+
+.header, footer{
+    background-color: #1F2937;
+    padding: 1.75rem;
+    color: #E5E7EB;
+}
+
+.main{
+    margin: 2rem 3rem;
+}
+
+.add__book{
+    display: block;
+    margin: auto;
+    border: none;
+    color: white;
+    background-color: #1F2937;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.add__book:hover,
+.add__book:focus{
+    transform: scale(1.1);
+}
+
+.book__list{
+    margin-block: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 1rem;
+}
+
+.book{
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(4, 1fr);
+    color: black;
+    background-color: white;
+    aspect-ratio: 9 / 12;
+    padding-top: 1.25rem;
+    border-radius: 0 0 1.25rem 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 #1F2937;
+}
+.book__delete{
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    height: 24%;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.book__delete:hover,
+.book__delete:focus{
+    transform: scale(1.15);
+}
+
+.book__data{
+    padding-inline: 1.5rem;
+}
+.book__read{
+    cursor: pointer;
+    color: white;
+    background-color: red;    
+    border: none;
+    border-top: 1px solid white;
+    transition: transform .2s;
+}
+.book__read.read{
+    background-color: green;
+}
+.book__read:hover,
+.book__read:focus{
+    transform: scale(1.1);
+}
+
+.header{
+    display: flex;
+    padding-inline: 5rem;
+    align-items: center;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
+
+.user__icon{
+    margin-left: auto;
+}
+
+
+.footer{
+    display: grid;
+    grid-template: 1fr / 1fr;    
+    place-items: center;
+}
+
+.modal{
+    position: absolute;
+    z-index: 10000;
+    padding: 2rem;    
+    background-color: #1F2937;
+    border: 2px solid red;
+    border-radius: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 9 / 12;
+}
+.modal.hidden{
+    display: none;
+}
+.close__modal{
+    position: absolute;
+    top: .775rem;
+    right: 2rem;
+    background-color: white;
+    border: none;
+    padding: .3rem .45rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.close__modal:hover,
+.close__modal:focus,
+.submit:hover,
+.submit:focus{
+    transform: scale(1.1);
+}
+
+.form{
+    color: white;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+    align-items: center;
+}
+.submit{
+    background-color: white;
+    border: none;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 7rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.input__data > input{
+    display: block;
+    padding: .5rem 1rem;
+}
+.input__data [type='checkbox']{
+    margin-left: .5rem;
+    transform: scale(1.5);
+}
+.input__data > input:invalid{
+    border: 1px solid red;
+}
